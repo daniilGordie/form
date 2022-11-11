@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/MainComponent.js" defer></script>
+        <!-- <script src="js/LoginServise.js" defer></script> -->
+        <script src="js/LoginComponent.js" defer></script>
+
+        <script src="js/script.js" defer></script>
+
+    </head>
+    <body>
+        <!-- Inner Container -->
+        <div class="container">
+            <main id="content"></main>
+        </div>
+        <!-- Login Form Container -->
+        <script id="login-template" type="text/template">
+            <form id="login-form" method="post" class="form-container">
+                <h3>
+                    Log In
+                </h3>
+                <div class="alert-danger d-none" role="alert" id="alert-message">
+                    Incorrect creditals, please check one and try again
+                </div>
+                <div class="user-bar">
+                    <label for="username">Email</label> 
+                    <input id="form-input" type="email" name="Email" class="input-space" placeholder="example@gmail.com">
+                </div>
+                <div class="user-bar">
+                    <label for="password">Password</label>
+                    <input id="form-password" type="password" name="Password" class="input-space" placeholder="******">
+                </div>
+                <button class="submit-item" type="submit">
+                    Sign in
+                </button>
+                <a href="#">
+                    Have account/ Log in 
+                </a>
+            </form>
+        </script>
+        <!-- Main table is showed after succes login -->
+        <script id="main-template" type="text/template"> 
+            <table class="user-list--table">
+                <thead>
+                    <tr>
+                        <td>#</td>
+                        <td>First</td>
+                        <td>Last</td>
+                        <td>Email</td>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </script>
+        <!-- table realization by template -->
+        <!-- <script id="user-template" type="text/template"> 
+            <tr data-id="{{id}}">
+                <th>{{id}}</th>
+                <td>First</td>
+                <td>Last</td>
+                <td>Email</td>
+            </tr>        
+        </script> -->
+    </body>
+</html>
